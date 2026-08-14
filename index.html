@@ -2,11 +2,11 @@
 <html>
 <body>
 <style>iframe{display:block;width:100%;box-sizing:border-box;}</style>
-<script>let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nUA='+navigator.userAgent;document.body.appendChild(p);</script>
-<iframe srcdoc="<body><script>let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nUA='+navigator.userAgent;document.body.appendChild(p);</script></body>"></iframe>
+<script>let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nUA='+JSON.stringify(navigator,null,1);document.body.appendChild(p);</script>
+<iframe srcdoc="<body><script>let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nUA='+JSON.stringify(navigator,null,1);document.body.appendChild(p);</script></body>"></iframe>
 <br>
 <iframe src="ua-test2.html"></iframe>
 <br>
-<iframe src="data:text/html,<body><script>let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nUA='+navigator.userAgent;document.body.appendChild(p);</script></body>"></iframe>
+<iframe src="data:text/html,<body><script>let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nUA='+JSON.stringify(navigator,null,1);document.body.appendChild(p);</script></body>"></iframe>
 </body>
 </html>
