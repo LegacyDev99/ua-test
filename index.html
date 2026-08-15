@@ -2,7 +2,13 @@
 <html>
 <body>
 <style>iframe{display:block;width:100%;height:3in;box-sizing:border-box;}</style>
-<script>let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nnavigator='+JSON.stringify({userAgent:navigator.userAgent,appCodeName:navigator.appCodeName,appName:navigator.appName,appVersion:navigator.appVersion,product:navigator.product,productSub:navigator.productSub,buildID:navigator.buildID,platform:navigator.platform,oscpu:navigator.oscpu,vendor:navigator.vendor,vendorSub:navigator.vendorSub},null,1);document.body.appendChild(p);</script>
+<script>
+(function(){
+let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nnavigator='+JSON.stringify({userAgent:navigator.userAgent,appCodeName:navigator.appCodeName,appName:navigator.appName,appVersion:navigator.appVersion,product:navigator.product,productSub:navigator.productSub,buildID:navigator.buildID,platform:navigator.platform,oscpu:navigator.oscpu,vendor:navigator.vendor,vendorSub:navigator.vendorSub},null,1);document.body.appendChild(p);
+let f=document.createElement('iframe');document.body.appendChild(f);let n=f.contentWindow.navigator;f.parentNode.removeChild(f);
+p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nnavigator='+JSON.stringify({userAgent:n.userAgent,appCodeName:n.appCodeName,appName:n.appName,appVersion:n.appVersion,product:n.product,productSub:n.productSub,buildID:n.buildID,platform:n.platform,oscpu:n.oscpu,vendor:n.vendor,vendorSub:n.vendorSub},null,1);document.body.appendChild(p);
+})();
+</script>
 <iframe srcdoc="<body><script>let p=document.createElement('pre');p.style.whiteSpace='pre-wrap';p.textContent='URL='+location.href+'\n\nnavigator='+JSON.stringify({userAgent:navigator.userAgent,appCodeName:navigator.appCodeName,appName:navigator.appName,appVersion:navigator.appVersion,product:navigator.product,productSub:navigator.productSub,buildID:navigator.buildID,platform:navigator.platform,oscpu:navigator.oscpu,vendor:navigator.vendor,vendorSub:navigator.vendorSub},null,1);document.body.appendChild(p);</script></body>"></iframe>
 <br>
 <iframe src="ua-test2.html"></iframe>
